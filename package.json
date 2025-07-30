@@ -1,0 +1,16 @@
+{
+    "name": "marcyform",
+    "version": "1.0.0",
+    "description": "form to request materials from the marcys on queercraft",
+    "scripts": {
+        "dev": "parcel serve ./*.html",
+        "build": "parcel build ./*.html"
+    },
+    "keywords": [],
+    "author": "Marceline Raine",
+    "license": "ISC",
+    "packageManager": "pnpm@10.13.1",
+    "dependencies": {
+        "parcel": "^2.15.4"
+    }
+}

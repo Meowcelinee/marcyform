@@ -8,3 +8,43 @@ body {
     font-family: 'JetBrains Mono';
     margin: 0;
 }
+
+main {
+    margin: 0 auto;
+}
+
+.header-container {
+    padding: 10px 16px;
+    margin: 0 auto;
+    width: 80%;
+
+    .header-text {
+        color: var(--text-main);
+    }
+
+    .subheader-text {
+        color: var(--more-subtext);
+        font-style: italic;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 8px;
+    margin: 0 auto;
+    width: 80%;
+
+    .desc-container {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .form-container {
+        background-color: var(--bg-form);
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+    }
+}

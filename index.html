@@ -12,24 +12,75 @@
 
 <body>
     <div class="header-container">
-        <h1 class="header-text">request materials from the marcys</h1>
+        <h1 class="header-text">request materials from the marcys <span id="colon3">:3</span></h1>
         <h3 class="subheader-text">(marcy/lavender and marceline)</h3>
     </div>
 
     <main>
         <div class="container">
             <div class="desc-container">
-                <p>
-                    order stuff from us idk
+                <p class="desc-para">
+                    after the border expansion in july, we were left with a ridiculous amount of rare materials- way too
+                    many to just hoard for ourselves.
                 </p>
+                <p class="desc-para">
+                    use the form on the right to request rare materials from us, and we will reach out as soon as we can
+                    to provide you with them :)
+                </p>
+
+                <br />
+
+                <p class="desc-para">
+                    we currently have:
+                </p>
+
+                <ul class="item-list">
+                    <li>sponges</li>
+                    <li>other things</li>
+                    <li>idk</li>
+                </ul>
             </div>
             <div class="form-container">
+                <h3 class="required-text"><span class="required">*</span> = required.</h3>
+                <hr />
                 <form>
-                    <input type="text" />
-                    <select name="material" id="material">
-                        <option value="sponge">Material?</option>
-                        <option value="sponge">Sponge</option>
+
+                    <h3 class="form-label">
+                        MC username:<span class="required">*</span>
+                    </h3>
+                    <p class="form-label-subtext">
+                        note: if you&apos;re on bedrock, put a period before your username.
+                    </p>
+                    <input type="text" name="MC user" minlength="3" maxlength="20" autocomplete="off" required />
+
+                    <h3 class="form-label">
+                        QC nickname:
+                    </h3>
+                    <input type="text" name="QC nick" maxlength="20" autocomplete="off" />
+
+                    <h3 class="form-label">
+                        discord username:<span class="required">*</span>
+                    </h3>
+                    <input type="text" name="Discord user" autocomplete="off" required />
+
+                    <h3 class="form-label">
+                        what material do you need?<span class="required">*</span>
+                    </h3>
+                    <select name="Material" id="material" required>
+                        <option value="penis" selected="selected">Something</option>
+                        <option value="Sponge">Sponge</option>
                     </select>
+
+                    <h3 class="form-label">
+                        what do you need the materials for?
+                    </h3>
+                    <textarea maxlength="320" name="Reason" placeholder="e.x. I need them for a project in which..."
+                        required></textarea>
+
+                    <div>
+                        <input type="submit" value="Send request!" />
+                    </div>
+
                 </form>
             </div>
         </div>

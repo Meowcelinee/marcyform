@@ -141,6 +141,7 @@ main {
             margin: 7px 0;
         }
 
+        input[type='number'],
         input[type='text'] {
             background-color: var(--bg-main);
             border: 1px var(--bg-secondary) solid;

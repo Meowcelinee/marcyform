@@ -83,8 +83,19 @@
                         what material do you need?<span class="required">*</span>
                     </h3>
                     <select name="Material" id="material" required>
+                        <option value="" selected></option>
                         <option value="Sponge">Sponge</option>
+                        <option value="Something">Something else</option>
                     </select>
+
+                    <!-- material amount -->
+                    <h3 class="form-label">
+                        how many do you need (approximately)?
+                    </h3>
+                    <p class="form-label-subtext">
+                        max: <span id="maxAmount">(please select a material)</span>
+                    </p>
+                    <input type="number" name="Amount" min="0" id="amount" />
 
                     <!-- reason for materials -->
                     <h3 class="form-label">

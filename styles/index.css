@@ -20,6 +20,7 @@ body {
     color: var(--text-main);
     font-family: 'JetBrains Mono';
     margin: 0;
+    overflow-x: hidden;
 }
 
 main {
@@ -45,6 +46,7 @@ main {
     display: flex;
     gap: 16px;
     margin: 0 auto;
+    padding: 12px 0;
     width: 80%;
 
     .desc-container {
@@ -57,6 +59,11 @@ main {
             font-weight: 500;
             letter-spacing: 0.6;
             line-height: 1.5;
+        }
+
+        .about-us {
+            animation: appear 1300ms linear;
+            font-style: italic;
         }
 
         #ownerList {
@@ -144,13 +151,13 @@ main {
         }
 
         input[type='submit'] {
-            background-color: var(--bg-main);
+            background-color: var(--fag);
             border: 1px var(--bg-secondary) solid;
             border-radius: 6px;
+            color: var(--bg-main);
             font-size: 12pt;
-            padding: 5px;
             margin: 16px 0;
-            color: var(--text-main);
+            padding: 5px;
 
             &:hover {
                 filter: brightness(130%);
@@ -186,6 +193,100 @@ main {
         #submitStatusSubtext {
             color: var(--subtext);
             font-size: 11pt;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .header-container {
+        padding: 6px 10px;
+        margin: 0 auto;
+        width: 90%;
+
+        .header-text {
+            font-size: 20pt;
+            color: var(--text-main);
+        }
+
+        .subheader-text {
+            color: var(--more-subtext);
+            font-size: 12pt;
+            font-style: italic;
+        }
+    }
+
+    .container {
+        display: block !important;
+        width: 95% !important;
+
+        .desc-container {
+            width: 90% !important;
+
+            .item-list,
+            .desc-para {
+                font-size: 11pt;
+                font-weight: 500;
+                letter-spacing: 0.5;
+                line-height: 1.4;
+            }
+
+            .about-us,
+            #ownerList {
+                display: none;
+            }
+        }
+
+        .form-container {
+            padding: 4px 10px;
+            width: 95% !important;
+
+            .required-text {
+                font-size: 12pt;
+                margin: 10px 0;
+            }
+
+            .required {
+                font-size: 16px !important;
+            }
+
+            .form-label {
+                font-size: 12pt;
+                margin: 6px 0;
+                margin-top: 16px !important;
+            }
+
+            .form-label-subtext {
+                font-size: 12px;
+                margin: 7px 0;
+            }
+
+            input[type='text'] {
+                border-radius: 5px;
+                font-size: 11pt;
+                padding: 4px;
+            }
+
+            input[type='submit'] {
+                font-size: 12pt;
+                padding: 5px;
+                margin: 16px 0;
+            }
+
+            textarea {
+                width: 90%;
+                height: 170px;
+                font-size: 11pt;
+                letter-spacing: 0.4;
+                line-height: 1.2;
+            }
+
+            #submitStatus {
+                padding: 4px 0;
+            }
+
+            #submitStatusSubtext {
+                font-size: 10pt;
+            }
         }
     }
 }

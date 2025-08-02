@@ -18,13 +18,15 @@
 
     <main>
         <div class="container">
+
+            <!-- description -- left side on desktop -->
             <div class="desc-container">
                 <p class="desc-para">
                     after the border expansion in july, we were left with a ridiculous amount of rare materials- way too
                     many to just hoard for ourselves.
                 </p>
                 <p class="desc-para">
-                    use the form on the right to request rare materials from us, and we will reach out as soon as we can
+                    use the form to request rare materials from us, and we will reach out as soon as we can
                     to provide you with them :)
                 </p>
 
@@ -39,12 +41,19 @@
                     <li>other things</li>
                     <li>idk</li>
                 </ul>
+
+                <br />
+
+                <div id="ownerList"></div>
             </div>
+
+            <!-- form body -- right side on desktop -->
             <div class="form-container">
                 <h3 class="required-text"><span class="required">*</span> = required.</h3>
                 <hr />
                 <form>
 
+                    <!-- MC username -->
                     <h3 class="form-label">
                         MC username:<span class="required">*</span>
                     </h3>
@@ -53,16 +62,19 @@
                     </p>
                     <input type="text" name="MC user" minlength="3" maxlength="20" autocomplete="off" required />
 
+                    <!-- QC nickname (optional) -->
                     <h3 class="form-label">
                         QC nickname:
                     </h3>
                     <input type="text" name="QC nick" maxlength="20" autocomplete="off" />
 
+                    <!-- discord username -->
                     <h3 class="form-label">
                         discord username:<span class="required">*</span>
                     </h3>
                     <input type="text" name="Discord user" autocomplete="off" required />
 
+                    <!-- material selection (dropdown) -->
                     <h3 class="form-label">
                         what material do you need?<span class="required">*</span>
                     </h3>
@@ -71,6 +83,7 @@
                         <option value="Sponge">Sponge</option>
                     </select>
 
+                    <!-- reason for materials -->
                     <h3 class="form-label">
                         what do you need the materials for?
                     </h3>
@@ -78,7 +91,7 @@
                         required></textarea>
 
                     <div>
-                        <input type="submit" value="Send request!" />
+                        <input type="submit" value="Send request!" id="submit" />
                     </div>
 
                 </form>

@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('./vars.css');
 
+@keyframes appear {
+    0%,
+    40% {
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+
 body {
     background-color: var(--bg-main);
     color: var(--text-main);
@@ -20,10 +33,6 @@ main {
 
     .header-text {
         color: var(--text-main);
-
-        /* #colon3 {
-            font-family: 'Fira Code';
-        } */
     }
 
     .subheader-text {
@@ -49,6 +58,41 @@ main {
             letter-spacing: 0.6;
             line-height: 1.5;
         }
+
+        #ownerList {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 16px 0;
+            width: 90%;
+
+            .owner {
+                animation: appear 1500ms ease-in;
+                background-color: var(--bg-secondary);
+                border-radius: 4px;
+                display: flex;
+
+                img {
+                    margin-right: 6px;
+                    padding: 2px;
+                    height: 128px;
+                    width: 128px;
+                }
+
+                .owner-desc {
+                    .owner-name {
+                        color: var(--fag);
+                        font-size: 12pt;
+                    }
+
+                    .owner-username {
+                        color: var(--subtext);
+                        font-size: 10pt;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
     }
 
     .form-container {
@@ -62,7 +106,6 @@ main {
         hr {
             border-color: #445;
             border-width: 1px;
-            /* width: 95%; */
         }
 
         form {
@@ -93,7 +136,7 @@ main {
 
         input[type='text'] {
             background-color: var(--bg-main);
-            border: 1px #373747 solid;
+            border: 1px var(--bg-secondary) solid;
             border-radius: 5px;
             font-size: 11pt;
             padding: 4px;
@@ -102,7 +145,7 @@ main {
 
         input[type='submit'] {
             background-color: var(--bg-main);
-            border: 1px #373747 solid;
+            border: 1px var(--bg-secondary) solid;
             border-radius: 6px;
             font-size: 12pt;
             padding: 5px;
